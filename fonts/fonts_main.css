@@ -1,0 +1,34 @@
+@font-face {
+    font-family: HelveticaNeueLt27;
+    src: url("/fonts/Helvetica_Lt.ttf");
+}
+
+@font-face {
+    font-family: HelveticaNeueLt37;
+    src: url("../fonts/Helvetica LT 37 Thin Condensed Oblique.ttf");
+}
+
+@font-face {
+    font-family: HelveticaNeueLt46;
+    src: url("../fonts/Helvetica46-Light Italic.ttf");
+}
+
+@font-face {
+    font-family: OpenSansEB;
+    src: url("../fonts/Open Sans Extrabold.ttf");
+}
+
+@font-face {
+    font-family: OpenSansL;
+    src: url("../fonts/Open Sans Light.ttf");
+}
+
+@font-face {
+    font-family: OpenSansSB;
+    src: url("../fonts/Open Sans Semibold.ttf");
+}
+
+@font-face {
+    font-family: OpenSansR;
+    src: url("../fonts/OpenSansHebrew-Regular.ttf");
+}
