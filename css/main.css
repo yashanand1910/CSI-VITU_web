@@ -1,7 +1,18 @@
-body {
+/* line 1, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 3, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
   color: #000;
   overflow-x: hidden; }
 
+/* line 11, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 img.typeface {
   width: 350px;
   height: auto;
@@ -10,6 +21,7 @@ img.typeface {
 /*
 *BACKGROUND
 */
+/* line 20, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .bg-main {
   background: #fff;
   background-image: url();
@@ -20,6 +32,7 @@ img.typeface {
   bottom: 0;
   left: 0; }
 
+/* line 31, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .bg-main .bg-layer {
   position: fixed;
   top: 0;
@@ -31,6 +44,7 @@ img.typeface {
   transition: opacity 0.5s ease;
   transform: translate3d(0, 0, 0); }
 
+/* line 43, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .bg-layer-move {
   width: 100%;
   height: 900px;
@@ -45,8 +59,11 @@ img.typeface {
   transform: translate3d(0, 0, 0); }
 
 @media (max-width: 550px) {
+  /* line 58, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
   .bg-move {
     display: none; } }
+
+/* line 63, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .x1 {
   -moz-animation: move-layer-bg 40s linear infinite;
   -webkit-animation: move-layer-bg 40s linear infinite;
@@ -59,52 +76,376 @@ img.typeface {
     margin-left: 100%; }
   100% {
     margin-left: -1400px; } }
+
 @-moz-keyframes move-layer-bg {
   0% {
     margin-left: 100%; }
   100% {
     margin-left: -1400px; } }
+
 @-o-keyframes move-layer-bg {
   0% {
     margin-left: 100%; }
   100% {
     margin-left: -1400px; } }
+
 /*
 *TAGLINE
 */
-#main .row {
-  top: -50%;
-  left: -50%; }
+/* line 99, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+ul {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px; }
 
-.tag > h3 {
+/* line 109, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+li {
+  text-align: webkit-match-parent; }
+
+/* line 113, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+.whenwebuild_block {
+  height: 33.3%; }
+
+/* line 117, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+.whenwebuild_title {
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  /* line 124, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .whenwebuild_title :before {
+    display: inline-block;
+    margin-left: -0.25em;
+    height: 100%;
+    vertical-align: middle; }
+  /* line 131, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .whenwebuild_title .col-right {
+    margin-left: 10px;
+    margin-right: 10px; }
+  /* line 137, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .whenwebuild_title .col-left span {
+    font-size: 1em;
+    transform: rotate(-90deg); }
+  /* line 144, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .whenwebuild_title .whenwebuild_inner {
+    display: inline-block;
+    max-width: 99%;
+    position: relative;
+    padding: 0 57px;
+    vertical-align: middle; }
+  /* line 152, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .whenwebuild_title ul {
+    float: left; }
+  /* line 156, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .whenwebuild_title li {
+    line-height: 180%;
+    font-size: 2em; }
+    /* line 159, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+    .whenwebuild_title li span {
+      display: inline-block;
+      transform: translate(0, 0);
+      transition: transform 750ms cubic-bezier(1, 0.02, 0.1, 1), opacity 500ms cubic-bezier(1, 0.02, 0.1, 1); }
+
+/* line 169, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+h5 {
   top: 0;
   font-family: OpenSansSB;
-  transform: rotate(-90deg);
-  font-size: 55px; }
-  .tag > h3 .matter {
-    transform: rotate(90deg);
-    color: #aaa;
-    font-size: 65px; }
+  transform: rotate(-90deg); }
 
+/* line 177, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 li {
   transform: none;
   list-style: none; }
 
+/* line 182, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .tag > h1 {
   font-family: OpenSansSB;
   font-size: 105px;
   left: -50%;
   vertical-align: bottom; }
 
+/*=======================
+*PROJECTS
+=======================*/
+/* Made with http://icomoon.io/app */
+/* General style */
+/* line 197, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+#projects {
+  /* Grid style */
+  /* Slideshow style */
+  /* Navigation */
+  /* Info on arrow key navigation */ }
+  /* line 198, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid-gallery ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  /* line 204, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid-gallery figure {
+    margin: 0; }
+  /* line 208, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid-gallery figure img {
+    display: block;
+    width: 100%; }
+  /* line 213, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid-gallery figcaption h3 {
+    margin: 0;
+    padding: 0 0 0.5em; }
+  /* line 218, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid-gallery figcaption p {
+    margin: 0; }
+  /* line 223, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid-wrap {
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 0 1em 1.875em; }
+  /* line 229, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid {
+    margin: 0 auto; }
+  /* line 233, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid li {
+    width: 25%;
+    float: left;
+    cursor: pointer; }
+  /* line 239, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid figure {
+    padding: 15px;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+  /* line 245, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid li:hover figure {
+    opacity: 0.7; }
+  /* line 249, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .grid figcaption {
+    background: #e4e4e4;
+    padding: 25px; }
+  /* line 255, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s; }
+  /* line 272, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow-open .slideshow {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+  /* line 279, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow ul {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 150px);
+    transform: translate3d(0, 0, 150px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s; }
+  /* line 290, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow ul.animatable li {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s; }
+  /* line 295, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow-open .slideshow ul {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  /* line 300, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow li {
+    width: 660px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -280px 0 0 -330px;
+    visibility: hidden; }
+  /* line 310, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow li.show {
+    visibility: visible; }
+  /* line 314, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+  /* line 326, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow li.current:after {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s; }
+  /* line 333, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow figure {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 50px solid #fff;
+    overflow: hidden; }
+  /* line 341, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow figcaption {
+    padding-bottom: 20px; }
+  /* line 345, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow figcaption h3 {
+    font-weight: 300;
+    font-size: 200%; }
+  /* line 351, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow nav span {
+    position: fixed;
+    z-index: 1000;
+    color: #59656c;
+    text-align: center;
+    padding: 3%;
+    cursor: pointer;
+    font-size: 2.2em; }
+  /* line 362, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow nav span.nav-prev,
+  #projects .slideshow nav span.nav-next {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  /* line 368, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow nav span.nav-next {
+    right: 0; }
+  /* line 372, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .slideshow nav span.nav-close {
+    top: 0;
+    right: 0;
+    padding: 0.5em 1em;
+    color: #31373a; }
+  /* line 380, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .icon:before,
+  #projects .icon:after {
+    font-family: 'fontawesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  /* line 392, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects span.nav-prev:before {
+    content: "\e601"; }
+  /* line 396, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects span.nav-next:before {
+    content: "\e600"; }
+  /* line 400, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects span.nav-close:before {
+    content: "\e602"; }
+  /* line 405, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .info-keys {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    font-size: 8px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center; }
+  /* line 419, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .info-keys:before,
+  #projects .info-keys:after {
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 14px;
+    font-size: 12px; }
+  /* line 430, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .info-keys:before {
+    left: 10px;
+    content: "\e603"; }
+  /* line 435, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #projects .info-keys:after {
+    right: 10px;
+    content: "\e604"; }
+
+@media screen and (max-width: 60em) {
+  /* line 441, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .grid li {
+    width: 33.3%; }
+  /* line 445, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .slideshow li {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0; }
+  /* line 453, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .slideshow li figure img {
+    width: auto;
+    margin: 0 auto;
+    max-width: 100%; }
+  /* line 460, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .slideshow nav span,
+  .slideshow nav span.nav-close {
+    font-size: 1.8em;
+    padding: 0.3em; }
+  /* line 465, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .info-keys {
+    display: none; } }
+
+@media screen and (max-width: 35em) {
+  /* line 472, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .grid li {
+    width: 50%; } }
+
+@media screen and (max-width: 24em) {
+  /* line 478, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  .grid li {
+    width: 100%; } }
+
+/*
+*PROFILE
+*/
+/* line 488, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+#profile .aboutus {
+  background: #000;
+  height: 700px; }
+  /* line 492, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #profile .aboutus .slider-gallery {
+    overflow: hidden;
+    white-space: nowrap; }
+  /* line 497, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
+  #profile .aboutus .slider-gallery > * {
+    display: inline-block;
+    float: none; }
+
 /*
 *HAMBURGER
 */
+/* line 514, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger-menu {
   position: relative;
   width: 50px;
   height: 50px;
   cursor: pointer; }
 
+/* line 520, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger {
   position: absolute;
   background: #fff;
@@ -115,6 +456,7 @@ li {
   margin-top: -5px;
   opacity: 1; }
 
+/* line 530, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger::before {
   position: absolute;
   background: #6f6f6f;
@@ -124,6 +466,7 @@ li {
   content: "";
   display: block; }
 
+/* line 539, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger::after {
   position: absolute;
   background: #6f6f6f;
@@ -133,20 +476,24 @@ li {
   content: "";
   display: block; }
 
+/* line 548, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger::after, .burger::before, .burger {
-  transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out; }
 
+/* line 552, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger-menu.menu-on .burger::after {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   bottom: 0px; }
 
+/* line 557, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger-menu.menu-on .burger::before {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   top: 0px; }
 
+/* line 562, C:/Users/YashArora/Documents/GitHub/CSI-VITU_web/css/main.scss */
 .burger-menu.menu-on .burger {
   background: rgba(111, 111, 111, 0); }
 
