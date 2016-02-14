@@ -1,6 +1,4 @@
-    $("#profile_gallery").bootslider({
-    snapToItem: true
-    });
+ 
 
 $("#profile_gallery > div:gt(0)").hide();
 

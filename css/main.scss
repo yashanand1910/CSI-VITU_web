@@ -14,6 +14,157 @@ img.typeface {
     padding: 10px 20px;
 }
 
+/*===============
+*LOADER
+=================*/
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 48%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    z-index: 1001;
+  
+  .container {
+  position:absolute;
+  width:120px;
+  height:120px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  }
+
+.container > div {
+  position:absolute;
+  transform-origin:center;
+}
+
+.square, .circle, .triangle {
+  
+}
+
+.square {
+  background:#75B3D1;
+  width:24px;
+  height:24px;
+
+  transform:scale(0);
+  animation: shrinkgrow 3s ease-in-out infinite;
+  
+  animation-delay:2s;
+}
+
+.circle {
+  background:#81D47D;
+  width:27px;
+  height:27px;
+
+  border-radius:50%;
+  animation: shrinkgrow 3s ease-in-out infinite;
+  animation-delay:0s;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width:  0 14.5px 25.1px 14.5px;
+  border-color: transparent transparent #D2798C transparent;
+  transform:scale(0);
+  animation: shrinkgrow 3s ease-in-out infinite;
+  animation-delay:1s;
+}
+
+@keyframes shrinkgrow {
+  0% {
+    transform:scale(0);
+  }
+  
+  12.5% {
+    transform:scale(1)
+  }
+  
+  25% {
+    transform:scale(1)
+  }
+  
+  33% {
+    transform:scale(0)
+  }
+  100% {
+    transform:scale(0)
+  }
+}
+    
+}
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #AAA;
+        z-index: 1000;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+
 /*
 *BACKGROUND
 */
@@ -49,7 +200,7 @@ img.typeface {
   bottom: 0;
   left: 0;
   z-index: 5;
-  background: transparent url('..') left bottom no-repeat;
+  background: transparent url('../img/thumb/1.pn') left bottom no-repeat;
   background-size: cover;
   transform: translate3d(0, 0, 0);
 }
@@ -346,7 +497,9 @@ h5{
 	font-weight: 300;
 	font-size: 200%;
 }
+    
 
+    
 /* Navigation */
 .slideshow nav span {
 	position: fixed;
@@ -436,7 +589,7 @@ span.nav-close:before {
 	right: 10px;
 	content: "\e604";
 }
-}
+
 @media screen and (max-width: 60em) {
 	.grid li {
 		width: 33.3%;
@@ -480,10 +633,34 @@ span.nav-close:before {
 	}
 }
 
+}
 
-/*
+    
+/*=======================
+*COLLABORATION
+=======================*/
+#collaboration{
+    color: #000;
+    height: 800px;
+}
+    
+/*=======================
+*EVENTS
+=======================*/
+
+
+/*=======================
+*CODEPLAY
+=======================*/
+#codeplay{
+    height: 700px;
+}  
+
+
+
+/*=======================
 *PROFILE
-*/
+=======================*/
 #profile{
     .aboutus{
         background: #000;
@@ -505,6 +682,17 @@ span.nav-close:before {
     .personal_prof{
     
     }
+}
+    
+/*=======================
+*FOOTER
+=======================*/
+footer {
+  position: absolute;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 300px;
+  background-color: #454733;
 }
 
 
