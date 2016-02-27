@@ -16,27 +16,15 @@
     <!--Bootstrap-->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="scripts/modernizr.custom.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.toggle-nav').click(function(){
-            toggleNav();
-        });
+    <script src="scripts/TweenMax.min.js"></script>
     
-	});  
-        
-    function toggleNav(){
-        if($('#site-wrapper').hasClass('show-nav'))
-        {
-            $('#site-wrapper').removeClass('show-nav');
-        }else{
-            $('#site-wrapper').addClass('show-nav');
-        }
-    }
+
+    <script>
+
     
     $(document).ready(function() {
 	setTimeout(function(){
 		$('body').addClass('loaded');
-        $('nav').addClass('navbar-fixed-top');
 	}, 1000);
     
 	}); 
@@ -45,13 +33,46 @@
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
-<div id="site-wrapper">
-<div id="site-canvas">
-    <div id="site-menu">
-        <a href="#" class="toggle-nav">Cut me down</a>
-    </div>
+    <div id="wrapper">
+    <div class="overlay"></div>
     
-    <a href="#" class="toggle-nav btn btn-lg btn-success" style="z-index: 2000;color:#fff" id="big-sexy">toggle nav</a>
+<!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li>
+                    <a href="#main"><i class="fa fa-fw fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#projects"><i class="fa fa-fw fa-folder"></i> Projects</a>
+                </li>
+                <li>
+                    <a href="#events"><i class="fa fa-fw fa-file-o"></i> Events</a>
+                </li>
+                <li>
+                    <a href="#profile"><i class="fa fa-fw fa-cog"></i> Team</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+    
+  <!--  <div id="site-menu">
+        <a href="#" class="toggle-nav">Cut me down</a>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">About us</a></li>
+       </ul>
+    </div>
+-->
+<div id="page-content-wrapper">
+<button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          
 <div id="loader-wrapper">
     <div id="loader">
 <div class="container">
@@ -69,60 +90,34 @@
 
 <div class="bg-main">
     <div class="bg-move">
-        <div class="bg-layer-move x1"></div>
+        <div class="bg-layer-move x1">
+<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1914.47 993.47">
+    <defs>
+    <style>
+
+    </style>
+    </defs>
+    
+    <rect class="cls-1 svg_rotate" x="2301.12" y="909.53" width="92.46" height="92.46" transform="translate(-581.68 -1409.69) rotate(45)"/><circle class="cls-1 svg_rotate" cx="1787.97" cy="696.58" r="125"/><polygon class="cls-1 svg_rotate" points="1400.14 99.44 1396.04 36.66 1448.36 1.73 1504.78 29.57 1508.88 92.35 1456.55 127.29 1400.14 99.44"/><polygon class="cls-1 svg_rotate" points="89.91 381.94 2.97 314.5 104.84 272.93 89.91 381.94"/></svg>
+            
+            
+        </div>
     </div>
-    <div class="bg-layer color1"></div>
-    <div class="bg-layer color2"></div>
-    <div class="bg-layer color3"></div>
-    <div class="bg-layer color4"></div>
 </div>
 
 <header>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            
-         <div class="toggle-nav burger-menu pull-right" id="menu_open">
-                <div class="burger"></div>  
-            </div>  
- <!--           
-<nav role="navigation" class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <button type="button" data-target="#navbarCollapse" data-toggle="collapse"             class="navbar-toggle">
-           <span class="sr-only">Toggle navigation</span>
-           <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-       <a href="#" class="navbar-brand">
-       <img class="typeface" src="img/csi_typepng"></img>
-       </a>
-   </div>
-
-    <div id="navbarCollapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">About us</a></li>
-       </ul>
-       <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">F</a></li>
-            <li><a href="#">T</a></li>
-       </ul>
-    </div>
-</nav>   -->
 
 
         </div>
     </div>
 </header> 
 
-  
 <section id="main">
        <div class="container">
         <div class="row tagline">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 whenwebuild_block">
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 whenwebuild_block">
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 763.96 761.58"><defs>
        <style>
            .cls-1,.cls-2,.cls-4,.cls-5{
@@ -164,40 +159,23 @@
        <line class="cls-4" x1="691.08" y1="303.93" x2="684.26" y2="340.66"/>
        <line class="cls-4" x1="663.92" y1="288.93" x2="639.05" y2="300.69"/>
        <line class="cls-4" x1="634.96" y1="256.93" x2="659.64" y2="262.18"/></svg>
-        
-   <!--         <h3><span>When we build,</span><br>
-            <span class="matter">it matters.</span>
-            </h3>
-    -->
-  <!--      <div class="whenwebuild_title">
-        <div class="whenwebuild_inner">
-        <ul class="col-left">
-          <li><span>build</span></li>
-          <li><span>we</span></li>
-          <li><span>When</span></li>
-          <li><span>_</span></li> 
-        </ul>
-        <ul class="col-right">
-          <li><span>I</span></li>
-          <li><span>T</span></li>
-          <li><span>_</span></li>
-          <li><span>M</span></li>
-          <li><span>A</span></li>
-          <li><span>T</span></li>
-          <li><span>T</span></li>
-          <li><span>E</span></li>
-          <li><span>R</span></li>
-          <li><span>S</span></li>
-        </ul>
-      </div>        
-         </div>   -->
-
-        
 
          </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 whenwebuild_text"></div>
-When we build it matters.
-       
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right whenwebuild_text">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 697.04 255.95"><defs><style>
+    .cls-1t{font-size:73.99px;}
+    .cls-1t,.cls-3t,.cls-4t{fill:#fff;}
+    .cls-1t,.cls-3t,.cls-5t{font-family:Lato;}
+    .cls-2t{letter-spacing:1px;}
+    .cls-3t{font-size:63.74px;}
+    .cls-4t{stroke:#fff;stroke-miterlimit:10;stroke-width:1.4px;}
+    .cls-5t{font-size:38.13px;fill:#7db2ff;font-style:italic;}
+    .cls-6t{white-space:pre;}.cls-7t{letter-spacing:-1px;}
+    </style>
+      </defs>
+      <text class="cls-1t" transform="translate(173.76 161.92)">W<tspan class="cls-2t" x="77.35" y="0">hen</tspan><tspan x="202.32" y="0"> </tspan><tspan x="220.85" y="0">w</tspan><tspan class="cls-2t" x="279.56" y="0">e build,</tspan></text><text class="cls-3t" transform="translate(406.63 238.84)">it m<tspan x="110.72" y="0">a</tspan><tspan x="142.94" y="0">tt</tspan><tspan x="187.28" y="0">e</tspan><tspan x="221.89" y="0">r</tspan><tspan x="245.86" y="0">s.</tspan></text><line class="cls-4t" y1="221.46" x2="358.81" y2="221.46"/><line class="cls-4t" x1="518" y1="86.69" x2="673" y2="86.69"/><text class="cls-5t" transform="translate(1.7 32.55)">WE DON’<tspan x="159.31" y="0">T</tspan><tspan class="cls-6t" x="179.2" y="0"> PL</tspan><tspan class="cls-7t" x="228.87" y="0">A</tspan><tspan x="250.26" y="0">Y</tspan><tspan class="cls-6t" x="270.62" y="0"> SOFT</tspan><tspan x="370.64" y="0">B</tspan><tspan x="393.29" y="0">ALL.</tspan></text>
+</svg>
+       </div>
         </div>
         </div>
 </section>
@@ -318,17 +296,20 @@ When we build it matters.
 </section>
    
 <section id="collaboration">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+   <div class="container">
+    <div class="row collab_padding">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 collab_hi">
+        <h2>Hi.</h2>
         </div>
-   
- 
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 collab-txt">
-
-      </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 collab-txt pull-right">
+        <h3> We have a lot more work under process.</h3>
+        <h4>Willing to raise a wave?</h4>
+        <span class="line"></span><h6>We do collaborate with people who are ready to do a constructive research on falafels.</h6>
+        </div>
+    </div>
+   </div>
 </section>
     
-      
 <section class="events">
     <div class="container">
         <div class="row"> 
@@ -396,10 +377,14 @@ When we build it matters.
 </section>
 
 <section id="codeplay">
+   <div class="container">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 aboutus">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 codeplay_logo">
+            <img src="img/CPLOGO.png"></img>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-0 personal_prof">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-0 codeplay_text">
+        <h1>yes!</h1>
+        <h2>We have our own hackfest -<span>CODEPLAY.</span></h2>
         </div>    
         </div>
     </div>
@@ -495,39 +480,51 @@ When we build it matters.
     </div>
 </section>
 
+
 <footer>
 <section id="footer">
-    <footer>
       <div class="container">
         <a href="#top">Go to top.</a>
-        <div class="inner clearfix">
+        <div class="row-fluid">
+        <div class="col-lg-4 col-sm-4 col-xs-12 footer_content pull-left">
 		
-		<div id="logo-footer"><p>Digital, for humans.</p></div>
+		<div><p>Holding the <span>VISION.</span></p></div>
 		
-		<p>© 2016 <a href="http://www.humaan.com.au" title="Websites, Mobile, eCommerce – Digital experiences for humans.">Humaan</a><a id="contact-link" href="http://humaan.com/contact" title="Contact Humaan">Contact &amp; Map</a></p>
-
-		<p class="social"><a id="fb-link" href="http://fb.com/humaan" target="_blank" title="Humaan on Facebook">fb.com/humaan</a><a href="#" target="_blank" title="Humaan on Twitter">@wearehumaan</a></p>
+		<p>© 2016 <a href="#main">Computer Scoiety of India</a>
+		<p>VIT University Student Branch</p>
+		</p>
+    </div>
+       <div class="col-lg-4 col-sm-4 col-xs-12 footer_content pull-right">
+       <p>Stalk us <span class="line"></span></p>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/csivit/?fref=ts">fb.com/csivit</a>
+            </li>
+            <li>
+                <a href="https://github.com/csivit">github.com/csivit</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/csivitu">twitter.com/csivitu</a>
+            </li>
+        </ul>
+		<div class="social">
+		
+            
+		</div>
 		
 	</div>
+     </div>
       </div>
-    </footer>
-</section>
-</footer>   
-   
-     
-
-         
-    </div>  <!--Site canvas div end-->
-
-    </div>
-       
+     </section>  </footer>   
+</div>
+    </div>   
    
    
     <script src="scripts/cbpGridGallery.js"></script>
     <script src="scripts/classie.js"></script>
     <script src="scripts/imagesloaded.pkgd.min.js"></script>
     <script src="scripts/masonry.pkgd.min.js"></script>
-    
+    <script src="scripts/animate.js"></script>
     <script src="scripts/main.js"></script>
     
     <script>

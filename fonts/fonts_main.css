@@ -32,3 +32,33 @@
     font-family: OpenSansR;
     src: url("../fonts/OpenSansHebrew-Regular.ttf");
 }
+
+@font-face {
+    font-family: Lato_bold;
+    src: url("../fonts/Lato/lato-Bold.ttf");
+}
+
+@font-face {
+    font-family: Lato_light;
+    src: url("../fonts/Lato/Lato-Light.ttf");
+}
+
+@font-face {
+    font-family: Lato_semibold;
+    src: url("../fonts/Lato/Lato-Semibold.ttf");
+}
+
+@font-face {
+    font-family: Lato_thin;
+    src: url("../fonts/Lato/Lato-Thin.ttf");
+}
+
+@font-face {
+    font-family: Lato_thinitalic;
+    src: url("../fonts/Lato/Lato-ThinItalic.ttf");
+}
+
+@font-face {
+    font-family: Lato_medium;
+    src: url("../fonts/Lato/Lato-Medium.ttf");
+}
