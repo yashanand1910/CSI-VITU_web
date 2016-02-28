@@ -269,6 +269,14 @@ svg {
 
 /* General style */
 #projects{
+    
+    h2{
+    font-family: Lato_semibold;
+    text-align: left;
+    font-size: 60px;
+    padding-bottom: 40px;
+    }
+    
 .grid-gallery ul {
 	list-style: none;
 	margin: 0;
@@ -328,7 +336,7 @@ svg {
 /* Slideshow style */
 .slideshow {
 	position: fixed;
-	background: rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.5);
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -426,10 +434,8 @@ svg {
 /* Navigation */
 .slideshow nav span {
 	position: fixed;
-	z-index: 1000;
-	color: #59656c;
-	text-align: center;
-	padding: 3%;
+	z-index: 9000;
+    font-weight: 100;
 	cursor: pointer;
 	font-size: 2.2em;
 }
@@ -437,19 +443,18 @@ svg {
 .slideshow nav span.nav-prev,
 .slideshow nav span.nav-next {
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+
 }
 
 .slideshow nav span.nav-next {
-	right: 0;
+	right: 5%;
 }
 
 .slideshow nav span.nav-close {
 	top: 0;
-	right: 0;
+	right: 5%;
 	padding: 0.5em 1em;
-	color: #31373a;
+	color: #fff;
 }
 
 .icon:before,
@@ -465,53 +470,19 @@ svg {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-span.nav-prev:before {
-	content: "\e601";
-}
+    span.typcn {
+        color: #0000d4;
+    }
+    
+    span.typcn-delete-outline{
+        color: #fff;
+    }
+    
+    span.typcn-delete-outline:hover{
+        color: #f76969;
+        transition: 0.5s ease-in;
+    }
 
-span.nav-next:before  {
-	content: "\e600";
-}
-
-span.nav-close:before {
-	content: "\e602";
-}
-
-/* Info on arrow key navigation */
-.info-keys {
-	position: fixed;
-	top: 10px;
-	left: 10px;
-	width: 60px;
-	font-size: 8px;
-	padding-top: 20px;
-	text-transform: uppercase;
-	color: #fff;
-	letter-spacing: 1px;
-	text-align: center;
-}
-
-.info-keys:before,
-.info-keys:after {
-	position: absolute;
-	top: 0;
-	width: 16px;
-	height: 16px;
-	border: 1px solid #fff;
-	text-align: center;
-	line-height: 14px;
-	font-size: 12px;
-}
-
-.info-keys:before {
-	left: 10px;
-	content: "\e603";
-}
-
-.info-keys:after {
-	right: 10px;
-	content: "\e604";
-}
 
 @media screen and (max-width: 60em) {
 	.grid li {
@@ -599,9 +570,10 @@ span.nav-close:before {
     
     h6{
     color: #aaa;
+    font-size: 18px;
     padding-bottom: 60px;
     }
-    h6 span {
+    h6 div {
       background: #fff;
       padding: 0 15px;
       position: relative;
@@ -623,7 +595,53 @@ span.nav-close:before {
 /*=======================
 *EVENTS
 =======================*/
+#events{
+  text-align: left;
+  
+    h2{
+    font-family: Lato_semibold;
+    font-size: 60px;
+    }
+    
+  .event_pic{
+  width: 100%;
+  height: auto;
+  border: 1px solid #fff;  
+  background: #fff;
+  overflow: hidden;
+  }
+    
+  .grow img{
+      left: -1em;
+  top: -1em;
+ transition: 1s ease-in-out;
+    }
+    
+  .grow img:hover{
+   transform: translate(1em,1em);
+    }
+    
+    .event_title{
+    font-family: Lato_thinitalic;
+    font-size: 25px;
+    color: #fff;
+    }
+    
 
+    
+    p{
+    font-family: Lato_thin;
+    font-size: 20px;
+    color: #aaa;
+    padding-bottom: 35px;
+    }
+    
+    .event_padding{
+    height: 100px;
+        
+    }
+
+}
 
 /*=======================
 *CODEPLAY
@@ -678,26 +696,61 @@ span.nav-close:before {
 *PROFILE
 =======================*/
 #profile{
+    position: relative;
+    padding-left: 6%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color: #3597d3;
+    ul{
+        list-style: none;
+        font-family: Lato_thinitalic;
+        font-size: 30px;
+        
+    }
+    h1{
+        color: #fff;
+    left: -40px;
+    font-family: Lato_semibold;
+    font-size: 80px;
+        padding-bottom: 20px;
+        
+    }
+      h1:before {
+      background: #ddd;
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      top: 30%;
+      left: 60px;
+      width: 30%;
+    } 
+    
+    
+    span{
+    font-family: Lato_light;
+        color: #aaa;
+    }
+    
+    a:hover{
+     text-decoration: none;
+    }
+    
+    span:hover{
+    color: #fff;
+    transition: 0.1s all ease-in;
+    }
+    
     .aboutus{
-        background: #000;
-        height: 700px;
-        
-        .slider-gallery {
-        overflow:hidden;
-        white-space:nowrap;	
-        }
-
-        .slider-gallery > * {
-        display:inline-block;	
-        
-        float:none;
-        }
-
+    position: absolute;
+        bottom: 50px;
+        right: 0;
+        font-size: 35px;
+       font-family: Lato_thinitalic;
+        color: #fff;
+        padding-bottom: 40px;
     }
-    
-    .personal_prof{
-    
-    }
+
 }
 
 /*==============================
@@ -812,6 +865,8 @@ span.nav-close:before {
   opacity: 1;
 }
 
+
+#sidebar-wrapper{
 .nav .open > a {
   background-color: transparent;
 }
@@ -918,6 +973,7 @@ span.nav-close:before {
   height: 65px;
   line-height: 44px;
 }
+}
 
 /*=======================
 OFF CANVAS
@@ -971,7 +1027,7 @@ OFF CANVAS
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, .4);
   z-index: 2000;
 }
 
@@ -988,7 +1044,7 @@ OFF CANVAS
   max-height: auto;
     
     a{
-    color: 0000d4;
+    color: #0000d4;
     }
     
     a:hover{

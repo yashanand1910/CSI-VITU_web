@@ -50,6 +50,7 @@ if (e.keyCode == 27) {
 $(document).ready(function () {
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
+      remove_side_display = $('#sidebar_navigation'),
      isClosed = false;
 
     trigger.click(function () {
@@ -62,11 +63,13 @@ $(document).ready(function () {
         overlay.hide();
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
+        remove_side_display.css('display','none');
         isClosed = false;
       } else {   
         overlay.show();
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
+        remove_side_display.css('display','block');
         isClosed = true;
       }
   }
