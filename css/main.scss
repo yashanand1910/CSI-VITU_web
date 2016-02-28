@@ -6,13 +6,7 @@ body, html {
   margin: 0;
   color: #fff;
   overflow-x: hidden;
-  transition: all 0.8s;
-}
-
-img.typeface {
-    width: 350px;
-    height: auto;
-    padding: 10px 20px;
+  transition: all 0.8s ease-in;
 }
 
 /*===============
@@ -116,7 +110,7 @@ img.typeface {
         top: 0;
         width: 51%;
         height: 100%;
-        background: #AAA;
+        background: #fff;
         z-index: 1000;
         -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
         -ms-transform: translateX(0);  /* IE 9 */
@@ -201,9 +195,9 @@ img.typeface {
 }
 
 .x1 {
-  -moz-animation: move-layer-bg 50s linear infinite;
-  -webkit-animation: move-layer-bg 50s linear infinite;
-  animation: move-layer-bg 50s linear infinite;
+  -moz-animation: move-layer-bg 40s linear infinite;
+  -webkit-animation: move-layer-bg 40s linear infinite;
+  animation: move-layer-bg 40s linear infinite;
   width: 2220px;
   height: 1080px;  
 }
@@ -237,7 +231,7 @@ svg {
     stroke-dasharray: 1000px;
     stroke-dashoffset: 1000px;
     animation-name: draw;
-    animation-duration: 8s;
+    animation-duration: 12s;
     animation-fill-mode: forwards; // Stay on the last frame
     animation-iteration-count: 1; // Run only once
     animation-timing-function: linear;
@@ -250,17 +244,101 @@ svg {
 }
 
 #Layer_2{
-    margin-top: 18%;
+    margin-top: 17%;
     margin-right: -10px;
     
 }
 
 @keyframes draw {
   to {
-    transition: ease-in;
+    transition: ease-in-out;
     stroke-dashoffset: 0;
   }
 }
+$baseAnimationDuration: 18s;
+$size: 100px;
+$svgSize: 70px;
+.cloud_moon{
+    position: absolute;
+    top: -50%;
+    margin-top: -400px;
+        overflow: visible;
+    svg{
+    width: 500px;
+
+    transform: scale(0.5,0.5);
+    }
+}
+
+.climacon_componentWrap-moon {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+  animation-duration: $baseAnimationDuration;
+  animation-direction: normal;
+  animation-name: partialRotate;
+  animation-duration: $baseAnimationDuration;
+  animation-direction: alternate;
+}
+
+.climacon_componentWrap-moon_cloud {
+  animation-name: behindCloudMove, partialRotate;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease-out, linear;
+  animation-delay: 0, $baseAnimationDuration / 4;
+  animation-duration: $baseAnimationDuration / 4, $baseAnimationDuration;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+
+@keyframes partialRotate {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.5, 0.5);
+  }
+}
+
+
+@keyframes behindCloudMove {
+  0% {
+    transform: translateX(-$svgSize * 0.025) translateY($svgSize * 0.025);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+
+
 
 /*=======================
 *PROJECTS
@@ -337,6 +415,7 @@ svg {
 .slideshow {
 	position: fixed;
 	background: rgba(0,0,0,0.5);
+    color: #041182;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -400,7 +479,7 @@ svg {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,0.5);
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
@@ -415,8 +494,8 @@ svg {
 .slideshow figure {
 	width: 100%;
 	height: 100%;
-	background: #fff;
-	border: 50px solid #fff;
+	background: rgba(255,255,255,0.8);
+	padding: 40px;
 	overflow: hidden;
 }
 
@@ -454,6 +533,7 @@ svg {
 	top: 0;
 	right: 5%;
 	padding: 0.5em 1em;
+    font-weight: 100;
 	color: #fff;
 }
 
@@ -471,17 +551,19 @@ svg {
 }
 
     span.typcn {
-        color: #0000d4;
+        color: #041182;
     }
     
-    span.typcn-delete-outline{
+    span.typcn-times{
+    color: #aaa;
+    }
+    
+    span.typcn-times{
         color: #fff;
-    }
-    
-    span.typcn-delete-outline:hover{
-        color: #f76969;
         transition: 0.5s ease-in;
     }
+    
+
 
 
 @media screen and (max-width: 60em) {
@@ -667,7 +749,7 @@ svg {
     height: auto;
     top: 250px;
     height: auto;
-    left: 30%;
+    left: 35%;
     }
     
     .codeplay_text{
@@ -686,6 +768,10 @@ svg {
         font-family: Lato_light;
         color: #f76969;
         }
+    }
+    h4{
+    font-family: Lato_light;
+    color: #aaa;
     }
     
 }  
@@ -750,8 +836,26 @@ svg {
         color: #fff;
         padding-bottom: 40px;
     }
+    
+    .clouds{
+    right: 0;
+    
+    width: 70%;
+    height: auto;
+    }
 
 }
+
+#Layer_csitype{
+    width: 16%;
+    height: auto;
+    top: 25px;
+    background: transparent;
+    display: block;
+    position: absolute;
+    right: 30px;
+}
+
 
 /*==============================
 *NAVIGATION
@@ -867,112 +971,55 @@ svg {
 
 
 #sidebar-wrapper{
-.nav .open > a {
-  background-color: transparent;
-}
-.nav .open > a:hover {
-  background-color: transparent;
-}
-.nav .open > a:focus {
-  background-color: transparent;
-}
+
 
 .sidebar-nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  top: 10%;
+  left: 30px;
+  line-height: 40px;
+  font-family: Lato_thin;
+  font-size: 30px;
   position: absolute;
-  top: 0;
-  width: 220px;
+  width: 100%;
 }
 .sidebar-nav li {
   z-index: 4999;
   display: inline-block;
-  line-height: 20px;
   position: relative;
   width: 100%;
 }
-.sidebar-nav li:before {
-  background-color: #1c1c1c;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 3px;
-  z-index: -1;
-}
-.sidebar-nav li:first-child a {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-.sidebar-nav li:nth-child(2):before {
-  background-color: #402d5c;
-}
-.sidebar-nav li:nth-child(3):before {
-  background-color: #4c366d;
-}
-.sidebar-nav li:nth-child(4):before {
-  background-color: #583e7e;
-}
-.sidebar-nav li:nth-child(5):before {
-  background-color: #64468f;
-}
-.sidebar-nav li:nth-child(6):before {
-  background-color: #704fa0;
-}
-.sidebar-nav li:nth-child(7):before {
-  background-color: #7c5aae;
-}
-.sidebar-nav li:nth-child(8):before {
-  background-color: #8a6cb6;
-}
-.sidebar-nav li:nth-child(9):before {
-  background-color: #987dbf;
-}
-.sidebar-nav li:hover:before {
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 100%;
-}
-.sidebar-nav li a {
-  color: #dddddd;
-  display: block;
-  padding: 10px 15px 10px 30px;
-  text-decoration: none;
-}
-.sidebar-nav li.open:hover before {
-  -webkit-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 100%;
-}
-.sidebar-nav .dropdown-menu {
-  background-color: #222222;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-}
-.sidebar-nav li a:hover,
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus,
-.sidebar-nav li.open a:hover,
-.sidebar-nav li.open a:active,
-.sidebar-nav li.open a:focus {
-  background-color: transparent;
-  color: #ffffff;
-  text-decoration: none;
-}
-.sidebar-nav > .sidebar-brand {
-  font-size: 20px;
-  height: 65px;
-  line-height: 44px;
-}
+    
+
+    .social_links{
+        position: absolute;
+        list-style: none;
+        ul{
+        overflow-x:hidden;
+        }
+        li{
+        display: inline;
+        }
+    }
+    
+    .side_footer{
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    }
+    
+    .nav>li>a{
+    font-family: Lato_semibold;
+    }
+    
+    .nav >li>a:hover, .nav>li>a:focus{
+    background-color: transparent;
+    color: #fff;
+    transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+    }
+
 }
 
 /*=======================
@@ -986,13 +1033,13 @@ OFF CANVAS
   transition: all 0.5s ease;
 }
 #wrapper.toggled {
-  padding-left: 400px;
+  padding-left: 300px;
 }
 #wrapper.toggled #sidebar-wrapper {
-  width: 400px;
+  width: 300px;
 }
 #wrapper.toggled #page-content-wrapper {
-  margin-right: -400px;
+  margin-right: -300px;
   position: absolute;
 }
 #sidebar-wrapper {
@@ -1001,8 +1048,8 @@ OFF CANVAS
   -webkit-transition: all 0.5s ease;
   background: #1a1a1a;
   height: 100%;
-  left: 400px;
-  margin-left: -400px;
+  left: 300px;
+  margin-left: -300px;
   overflow-x: hidden;
   overflow-y: auto;
   transition: all 0.5s ease;
@@ -1028,44 +1075,18 @@ OFF CANVAS
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, .4);
-  z-index: 2000;
+  z-index: 20;
 }
 
 /*=======================
 *FOOTER
 =======================*/
 #footer {
-  font-family: Lato_light;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  background-color: #001051;
-  z-index: 5000;
-  max-width: 100%;
-  max-height: auto;
-    
-    a{
+    padding: 3px 0 3px 0;
+    background-color: #fff;
+    text-align: center;
     color: #0000d4;
-    }
-    
-    a:hover{
-    text-decoration: none;
-    color: #fff;
-    }
-    
-    ul{
-    list-style: none;
-    font-family: Lato_semibold;
-    }
-    
-    span{
-    font-family: Lato_thinitalic;
-    letter-spacing: 2px;
-    }
-
-.footer_content{
-    padding-top: 30px;
-}
-    
+    font-size: 2em;
 }
 
 .line{
@@ -1091,3 +1112,102 @@ SVG STTYLES
         stroke-width:3px;
         }
 }
+
+/*===============================
+MEDIA QUERIES
+=================================*/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    #Layer_csitype{
+    width: 40%;
+    }
+    
+    #Layer_2{
+    position: absolute;
+    margin-right: 0;
+    margin-left: 0;
+    top: 120px;
+    right: 0px;
+    width: 50%;
+    }
+    
+    #codeplay{
+        img{
+        width: 40%;
+        top: 150px;
+        right: 10px;    
+        }
+    }
+    
+    #profile{
+        li{
+        font-size: 25px;
+        }
+    }
+    
+    #loader{
+        left: 50%;
+    }
+    
+}
+
+
+/**********************************************************/
+/* VARIABLES */
+$baseAnimationDuration: 18s;
+$size: 100px;
+$svgSize: 70px;
+
+//vars specific for curves
+$animationStep: 2;
+$increase: pi() / 100;
+
+$backgroundColor: skyblue;
+$fontColor: white;
+$strokeColor: white;
+$fillColor: #aedef4;
+
+/* Applies a stroke to the icons. Can use percentage for responsive */
+$strokeStrokeWidth: 0%;
+$strokeStrokeColor: black;
+$fillStrokeWidth: 0%;
+$fillStrokeColor: black;
+
+.climacon_component-stroke {
+  fill: $strokeColor;
+  stroke-width: $strokeStrokeWidth;
+  stroke: $strokeStrokeColor;
+}
+
+.climacon_component-fill {
+  fill: $fillColor;
+  stroke-width: $fillStrokeWidth;
+  stroke: $fillStrokeColor;
+}
+
+/* GLOBAL */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: $backgroundColor;
+  font-family: Lato, sans-serif;
+  color: $fontColor;
+}
+
+.wrapper {
+  width: 75%;
+  margin: 5% auto;
+  text-align: center;
+}
+
+
+

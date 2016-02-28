@@ -14,7 +14,9 @@ setInterval(function() {
 
     $(".burger-menu").click(function () {
 	$(this).toggleClass("menu-on");
-	});   
+	}); 
+
+
 
 //smooth scrolling
 $(function() {
