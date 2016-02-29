@@ -231,6 +231,7 @@ svg {
     stroke-dasharray: 1000px;
     stroke-dashoffset: 1000px;
     animation-name: draw;
+    animation-delay: 6s;
     animation-duration: 12s;
     animation-fill-mode: forwards; // Stay on the last frame
     animation-iteration-count: 1; // Run only once
@@ -251,7 +252,7 @@ svg {
 
 @keyframes draw {
   to {
-    transition: ease-in-out;
+    transition: cubic-bezier(.55, 0, .1, 1);
     stroke-dashoffset: 0;
   }
 }
@@ -407,6 +408,7 @@ $svgSize: 70px;
 }
 
 .grid figcaption {
+    color: #041182;
 	background: #e4e4e4;
 	padding: 25px;
 }
@@ -479,7 +481,7 @@ $svgSize: 70px;
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.9);
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
@@ -494,7 +496,7 @@ $svgSize: 70px;
 .slideshow figure {
 	width: 100%;
 	height: 100%;
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,0.9);
 	padding: 40px;
 	overflow: hidden;
 }
@@ -555,7 +557,7 @@ $svgSize: 70px;
     }
     
     span.typcn-times{
-    color: #aaa;
+    color: #dbdbdb;
     }
     
     span.typcn-times{
@@ -632,6 +634,7 @@ $svgSize: 70px;
             font-size: 100px;
             vertical-align: center;
             margin-top: -20px;
+            font-family: Lato_semibold;
         }
     }
     
@@ -644,14 +647,14 @@ $svgSize: 70px;
     h4{
     font-family: Lato_thin;
     font-size: 25px;
-    color: #aaa;
+    color: #dbdbdb;
         :after{
         border-bottom: 2px solid #fff;
         }
     }
     
     h6{
-    color: #aaa;
+    color: #dbdbdb;
     font-size: 18px;
     padding-bottom: 60px;
     }
@@ -714,7 +717,7 @@ $svgSize: 70px;
     p{
     font-family: Lato_thin;
     font-size: 20px;
-    color: #aaa;
+    color: #dbdbdb;
     padding-bottom: 35px;
     }
     
@@ -771,7 +774,7 @@ $svgSize: 70px;
     }
     h4{
     font-family: Lato_light;
-    color: #aaa;
+    color: #dbdbdb;
     }
     
 }  
@@ -815,11 +818,18 @@ $svgSize: 70px;
     
     span{
     font-family: Lato_light;
-        color: #aaa;
+        color: #dbdbdb;
+    }
+    
+    a{
+      letter-spacing: 0;
+      transition: all 1s linear;  
     }
     
     a:hover{
      text-decoration: none;
+     letter-spacing: 0.5px;
+
     }
     
     span:hover{
@@ -994,6 +1004,7 @@ $svgSize: 70px;
     
 
     .social_links{
+        left: 12px;
         position: absolute;
         list-style: none;
         ul{
@@ -1090,7 +1101,7 @@ OFF CANVAS
 }
 
 .line{
-    width: 40px;
+    width: 140px;
     border-bottom: 1px solid #fff;
     margin-top: -4px;
 }
@@ -1142,12 +1153,16 @@ MEDIA QUERIES
     
     #profile{
         li{
-        font-size: 25px;
+        font-size: 22px;
         }
     }
     
     #loader{
         left: 50%;
+    }
+    
+    #sidebar-wrapper{
+    
     }
     
 }
