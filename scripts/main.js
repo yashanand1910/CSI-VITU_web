@@ -81,3 +81,19 @@ $(document).ready(function () {
   });  
 });
 
+
+//checking for edge 
+if (/MSIE 10/i.test(navigator.userAgent)) {
+   // this is internet explorer 10
+   alert('isIE10');
+}
+
+if(/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)){
+    // this is internet explorer 9 and 11
+    window.location = 'pages/core/ie.htm';
+}
+
+if (/Edge\/12./i.test(navigator.userAgent)){
+   // this is Microsoft Edge
+   alert('Microsoft Edge');
+}

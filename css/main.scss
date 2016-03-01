@@ -7,7 +7,14 @@ body, html {
   color: #fff;
   overflow-x: hidden;
   transition: all 0.8s ease-in;
+  font-family: Lato_thin,  HelveticaNeueLt27, OpenSansR, OpenSansL;
 }
+
+    .line_solid{
+    width: 39px;
+    background: #fff;
+    height: 3px;
+    }
 
 /*===============
 *LOADER
@@ -61,7 +68,7 @@ body, html {
 }
 
 .circle {
-  background:#81D47D;
+  background:#ffff00;
   width:27px;
   height:27px;
 
@@ -76,7 +83,7 @@ body, html {
 
   border-style: solid;
   border-width:  0 14.5px 25.1px 14.5px;
-  border-color: transparent transparent #D2798C transparent;
+  border-color: transparent transparent #f76969 transparent;
   transform:scale(0);
   animation: shrinkgrow 3s ease-in-out infinite;
   animation-delay:1s;
@@ -112,9 +119,9 @@ body, html {
         height: 100%;
         background: #fff;
         z-index: 1000;
-        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(0);  /* IE 9 */
-        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: translateX(0); 
+        -ms-transform: translateX(0);  
+        transform: translateX(0);  
     }
 
     #loader-wrapper .loader-section.section-left {
@@ -127,18 +134,16 @@ body, html {
 
     /* Loaded */
     .loaded #loader-wrapper .loader-section.section-left {
-        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: translateX(-100%);  /* IE 9 */
-                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
-
+        -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%); 
+                transform: translateX(-100%);  
         -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
                 transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     }
-
     .loaded #loader-wrapper .loader-section.section-right {
-        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: translateX(100%);  /* IE 9 */
-                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: translateX(100%); 
+            -ms-transform: translateX(100%); 
+                transform: translateX(100%);  
 
 -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
         transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
@@ -152,17 +157,17 @@ body, html {
     .loaded #loader-wrapper {
         visibility: hidden;
 
-        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: translateY(-100%);  /* IE 9 */
-                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);  
 
         -webkit-transition: all 0.3s 1s ease-out;  
                 transition: all 0.3s 1s ease-out;
     }
 
-/*
+/*===============================================
 *BACKGROUND
-*/
+=================================================*/
 .bg-main {
     background: #fff;
     background-image: url('../img/main_bg2.jpg');
@@ -217,7 +222,7 @@ body, html {
     max-width: 100%;
     max-height:auto;
     
-}
+
 
 .whenwebuild_text{
     height: 240px;
@@ -233,12 +238,15 @@ svg {
     animation-name: draw;
     animation-delay: 6s;
     animation-duration: 12s;
-    animation-fill-mode: forwards; // Stay on the last frame
-    animation-iteration-count: 1; // Run only once
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1; 
     animation-timing-function: linear;
-    
   }
+    
 }
+
+    
+    }
 
 #Layer_1{
     margin-top: 10%;
@@ -256,6 +264,13 @@ svg {
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes dpnothing {
+  to {
+    transition: none;
+  }
+}
+
 $baseAnimationDuration: 18s;
 $size: 100px;
 $svgSize: 70px;
@@ -263,10 +278,9 @@ $svgSize: 70px;
     position: absolute;
     top: -50%;
     margin-top: -400px;
-        overflow: visible;
+    overflow: visible;
     svg{
     width: 500px;
-
     transform: scale(0.5,0.5);
     }
 }
@@ -344,16 +358,33 @@ $svgSize: 70px;
 /*=======================
 *PROJECTS
 =======================*/
-/* Made with http://icomoon.io/app */
-
-/* General style */
 #projects{
+    position: relative;
     
     h2{
-    font-family: Lato_semibold;
+    font-family: Lato_light;
     text-align: left;
-    font-size: 60px;
+    font-size: 55px;
     padding-bottom: 40px;
+        
+        span{
+        font-family: Lato_semibold;
+        }
+        
+        span:hover{
+         cursor: pointer;
+            transform-origin: center;
+        animation: disco 0.3s ease-in-out infinite;
+        }
+        
+    }
+    
+    .line_solid{
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    width: 520px;
+        
     }
     
 .grid-gallery ul {
@@ -464,7 +495,7 @@ $svgSize: 70px;
 	width: 660px;
 	height: 560px;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	left: 50%;
 	margin: -280px 0 0 -330px;
 	visibility: hidden;
@@ -495,7 +526,7 @@ $svgSize: 70px;
 
 .slideshow figure {
 	width: 100%;
-	height: 100%;
+	height: 120%;
 	background: rgba(255,255,255,0.9);
 	padding: 40px;
 	overflow: hidden;
@@ -504,8 +535,50 @@ $svgSize: 70px;
 .slideshow figcaption {
 	padding-bottom: 20px;
 }
+    
+.slideshow figcaption{
+    
 
-.slideshow figcaption h3 {
+    padding: 1px 60px 12px 60px;
+
+    
+    .project_tech{
+ color: #f76767;
+font-family: Lato_thinitalic;
+        span{
+        font-size: 12px;
+        padding: 3px;
+        font-family: Lato_thin;
+        text-transform: uppercase;
+        background: #0000d4;
+        color: #fff;
+        font-family: Lato_thinitalic;
+        border-radius: 3px;
+        }
+        span:after{
+        padding: 2px
+        }
+        span:before{
+        margin:2px
+        }
+    }
+    
+    .project_team{
+    font-size: 14px;
+    color: #f76767;
+font-family: Lato_thinitalic;
+    text-align: right;
+        span{
+           font-family: Lato_thin;
+        color: #0000d4;
+        padding: 0;
+    font-size:18px; 
+        }
+    }
+
+}
+
+figcaption h3 {
 	font-weight: 300;
 	font-size: 200%;
 }
@@ -528,7 +601,7 @@ $svgSize: 70px;
 }
 
 .slideshow nav span.nav-next {
-	right: 5%;
+	right: 65px;
 }
 
 .slideshow nav span.nav-close {
@@ -557,11 +630,12 @@ $svgSize: 70px;
     }
     
     span.typcn-times{
-    color: #dbdbdb;
+    color: #f76767;
+    font-weight: 100;
     }
     
     span.typcn-times{
-        color: #fff;
+        color: red;
         transition: 0.5s ease-in;
     }
     
@@ -682,11 +756,33 @@ $svgSize: 70px;
 =======================*/
 #events{
   text-align: left;
+  padding-top: 80px;
+  position: relative;
   
     h2{
-    font-family: Lato_semibold;
-    font-size: 60px;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: Lato_light;
+    font-size: 50px;
+    padding-bottom: 50px;
+        
+        span{
+        font-family: Lato_semibold;
+        }
+        span:hover{
+        cursor: pointer;
+        transform-origin: center;
+        animation: disco 0.3s ease-in-out infinite;
+        }
     }
+    
+    .line_right{
+    top: 0;
+    position: absolute;
+    top: 11%;
+    width: 20%;
+    }
+    
     
   .event_pic{
   width: 100%;
@@ -796,22 +892,23 @@ $svgSize: 70px;
         font-size: 30px;
         
     }
-    h1{
-        color: #fff;
+    h2{
+    text-transform: uppercase;
+    color: #fff;
     left: -40px;
-    font-family: Lato_semibold;
-    font-size: 80px;
-        padding-bottom: 20px;
+    font-family: Lato_light;
+    font-size: 65px;
+    padding-bottom: 20px;
         
     }
-      h1:before {
+      h2:before {
       background: #ddd;
       content: "";
       display: block;
-      height: 1px;
+      height: 2px;
       position: absolute;
-      top: 30%;
-      left: 60px;
+      top: 25%;
+      left: 32%;
       width: 30%;
     } 
     
@@ -839,12 +936,12 @@ $svgSize: 70px;
     
     .aboutus{
     position: absolute;
-        bottom: 50px;
+        bottom: 20px;
         right: 0;
         font-size: 35px;
        font-family: Lato_thinitalic;
         color: #fff;
-        padding-bottom: 40px;
+        padding-bottom: 70px;
     }
     
     .clouds{
@@ -853,17 +950,40 @@ $svgSize: 70px;
     width: 70%;
     height: auto;
     }
+    
+    .line_solid{
+    top: 31%;
+    width: 30%;
+    left: 34%;
+    }
+    
+        .us{
+        font-family: Lato_semibold;
+        }
+        
+        .us:hover{
+         cursor: pointer;
+            transform-origin: center;
+        animation: disco 0.3s ease-in-out infinite;
+        }
 
 }
 
-#Layer_csitype{
+.csi_type{
+    svg{
     width: 16%;
     height: auto;
     top: 25px;
     background: transparent;
     display: block;
     position: absolute;
-    right: 30px;
+    right: 30px;}
+}
+
+.line_solid{
+width: 39px;
+background: #fff;
+height: 3px;
 }
 
 
@@ -1130,7 +1250,7 @@ MEDIA QUERIES
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-    #Layer_csitype{
+    .csi_type svg{
     width: 40%;
     }
     
@@ -1157,33 +1277,57 @@ MEDIA QUERIES
         }
     }
     
-    #loader{
-        left: 50%;
+    #loader .container{
+        left: 25%;
     }
     
     #sidebar-wrapper{
+        
+    }
     
+    #projects{
+        .line_solid{
+        top: 160px;
+        }
+    }
+    
+    #profile{
+        h2:before{
+        top: 19%;
+        width: 70%;
+        }
+    }
+    
+    #profile{
+    padding-left: 0;
+    left: -10px;
     }
     
 }
 
+/*================================
+Common styles
+===================================*/
+        @keyframes disco{
+  0% {
+    color: #ff6b8d;
+  }  
+  100% {
+    color: #f76767;
+  }
+        }
+
 
 /**********************************************************/
-/* VARIABLES */
 $baseAnimationDuration: 18s;
 $size: 100px;
 $svgSize: 70px;
-
-//vars specific for curves
 $animationStep: 2;
 $increase: pi() / 100;
-
 $backgroundColor: skyblue;
 $fontColor: white;
 $strokeColor: white;
 $fillColor: #aedef4;
-
-/* Applies a stroke to the icons. Can use percentage for responsive */
 $strokeStrokeWidth: 0%;
 $strokeStrokeColor: black;
 $fillStrokeWidth: 0%;
@@ -1201,7 +1345,7 @@ $fillStrokeColor: black;
   stroke: $fillStrokeColor;
 }
 
-/* GLOBAL */
+
 
 *, *:after, *:before {
   box-sizing: border-box;
@@ -1212,12 +1356,6 @@ html, body {
   height: 100%;
 }
 
-body {
-  background: $backgroundColor;
-  font-family: Lato, sans-serif;
-  color: $fontColor;
-}
-
 .wrapper {
   width: 75%;
   margin: 5% auto;
@@ -1225,4 +1363,32 @@ body {
 }
 
 
+/*===============================
+IE and edge Support
+================================*/
 
+@media all and (-ms-high-contrast: active), (-ms-high-contrast: none){
+         .csi_type{
+         top: 0;
+         }
+         #loader{
+         display: none;
+         }
+         #loader-wrapper, .loader-section{
+         display: none;
+         }
+         svg {   
+         stroke-dashoffset: 0px; } /* IE10 */
+}
+
+@supports (-ms-accelerator:true) {
+    #main{
+        svg{
+            path{
+        animation: none;
+            animation-iteration-count: 0;
+                stroke-dashoffset: 0;
+        }
+        }
+    }
+}
