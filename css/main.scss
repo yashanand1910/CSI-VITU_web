@@ -276,12 +276,16 @@ $size: 100px;
 $svgSize: 70px;
 .cloud_moon{
     position: absolute;
-    top: -50%;
-    margin-top: -400px;
+    top: -140%;
+    right: 18%;
     overflow: visible;
     svg{
-    width: 500px;
-    transform: scale(0.5,0.5);
+    width: 100%;
+    transform: scale(1.8,1.8);
+    -moz-transform: scale(1,1);
+    stroke-dashoffset: 0;
+    background: transparent;
+    
     }
 }
 
@@ -901,7 +905,7 @@ figcaption h3 {
     padding-bottom: 20px;
         
     }
-      h2:before {
+ /*     h2:before {
       background: #ddd;
       content: "";
       display: block;
@@ -911,6 +915,7 @@ figcaption h3 {
       left: 32%;
       width: 30%;
     } 
+    */
     
     
     span{
@@ -952,9 +957,10 @@ figcaption h3 {
     }
     
     .line_solid{
-    top: 31%;
+    top: 26%;
     width: 30%;
-    left: 34%;
+    left: 40%;
+    position: absolute;
     }
     
         .us{
@@ -1275,6 +1281,9 @@ MEDIA QUERIES
         li{
         font-size: 22px;
         }
+        .line_solid{
+        display: none;
+        }
     }
     
     #loader .container{
@@ -1288,13 +1297,6 @@ MEDIA QUERIES
     #projects{
         .line_solid{
         top: 160px;
-        }
-    }
-    
-    #profile{
-        h2:before{
-        top: 19%;
-        width: 70%;
         }
     }
     
