@@ -170,7 +170,7 @@ body, html {
 =================================================*/
 .bg-main {
     background: #fff;
-    background-image: url('../img/main_bg2.jpg');
+    background-image: url('../img/main_bg0.jpg');
     background-size: cover;
     position: fixed;
     top: 0;
@@ -253,9 +253,8 @@ svg {
 }
 
 #Layer_2{
-    margin-top: 17%;
-    margin-right: -10px;
-    
+    margin-top: 20%;
+    margin-right: -10%;
 }
 
 @keyframes draw {
@@ -276,11 +275,11 @@ $size: 100px;
 $svgSize: 70px;
 .cloud_moon{
     position: absolute;
-    top: -140%;
-    right: 18%;
+    top: -125%;
+    right: 10%;
     overflow: visible;
     svg{
-    width: 100%;
+    width: 95%;
     transform: scale(1.8,1.8);
     -moz-transform: scale(1,1);
     stroke-dashoffset: 0;
@@ -364,9 +363,10 @@ $svgSize: 70px;
 =======================*/
 #projects{
     position: relative;
-    
-    h2{
+    margin-top: 150px;
     font-family: Lato_light;
+    h2{
+    font-family: Lato_thin;
     text-align: left;
     font-size: 55px;
     padding-bottom: 40px;
@@ -548,7 +548,7 @@ $svgSize: 70px;
     
     .project_tech{
  color: #f76767;
-font-family: Lato_thinitalic;
+font-family: Lato_light;
         span{
         font-size: 12px;
         padding: 3px;
@@ -783,7 +783,7 @@ figcaption h3 {
     .line_right{
     top: 0;
     position: absolute;
-    top: 11%;
+    top: 10%;
     width: 20%;
     }
     
@@ -834,7 +834,7 @@ figcaption h3 {
 #codeplay{
     height: 700px;
     position: relative;
-    background-image: url('../img/cpfb.svg');
+    background-image: url('../img/cpfb1.svg');
     background-size: cover;
     
     top: 0;
@@ -877,6 +877,8 @@ figcaption h3 {
     color: #dbdbdb;
     }
     
+    
+    
 }  
 
 
@@ -901,7 +903,7 @@ figcaption h3 {
     color: #fff;
     left: -40px;
     font-family: Lato_light;
-    font-size: 65px;
+    font-size: 60px;
     padding-bottom: 20px;
         
     }
@@ -957,9 +959,9 @@ figcaption h3 {
     }
     
     .line_solid{
-    top: 26%;
+    top: 22%;
     width: 30%;
-    left: 40%;
+    left: 42%;
     position: absolute;
     }
     
@@ -1223,7 +1225,8 @@ OFF CANVAS
     background-color: #fff;
     text-align: center;
     color: #0000d4;
-    font-size: 2em;
+    font-size: 1em;
+    margin-top: 100px;
 }
 
 .line{
@@ -1279,7 +1282,8 @@ MEDIA QUERIES
     
     #profile{
         li{
-        font-size: 22px;
+        font-size: 18px;
+        margin-left: -51px;
         }
         .line_solid{
         display: none;
@@ -1295,15 +1299,12 @@ MEDIA QUERIES
     }
     
     #projects{
+        margin-top:0;
         .line_solid{
         top: 160px;
         }
     }
     
-    #profile{
-    padding-left: 0;
-    left: -10px;
-    }
     
 }
 

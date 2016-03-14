@@ -130,7 +130,7 @@ body, html {
 =================================================*/
 .bg-main {
   background: #fff;
-  background-image: url("../img/main_bg2.jpg");
+  background-image: url("../img/main_bg0.jpg");
   background-size: cover;
   position: fixed;
   top: 0;
@@ -190,8 +190,8 @@ body, html {
   margin-top: 10%; }
 
 #Layer_2 {
-  margin-top: 17%;
-  margin-right: -10px; }
+  margin-top: 20%;
+  margin-right: -10%; }
 
 @keyframes draw {
   to {
@@ -202,11 +202,11 @@ body, html {
     transition: none; } }
 .cloud_moon {
   position: absolute;
-  top: -140%;
-  right: 18%;
+  top: -125%;
+  right: 10%;
   overflow: visible; }
   .cloud_moon svg {
-    width: 100%;
+    width: 95%;
     transform: scale(1.8, 1.8);
     -moz-transform: scale(1, 1);
     stroke-dashoffset: 0;
@@ -260,11 +260,13 @@ body, html {
 =======================*/
 #projects {
   position: relative;
+  margin-top: 150px;
+  font-family: Lato_light;
   /* Grid style */
   /* Slideshow style */
   /* Navigation */ }
   #projects h2 {
-    font-family: Lato_light;
+    font-family: Lato_thin;
     text-align: left;
     font-size: 55px;
     padding-bottom: 40px; }
@@ -386,7 +388,7 @@ body, html {
     padding: 1px 60px 12px 60px; }
     #projects .slideshow figcaption .project_tech {
       color: #f76767;
-      font-family: Lato_thinitalic; }
+      font-family: Lato_light; }
       #projects .slideshow figcaption .project_tech span {
         font-size: 12px;
         padding: 3px;
@@ -542,7 +544,7 @@ body, html {
   #events .line_right {
     top: 0;
     position: absolute;
-    top: 11%;
+    top: 10%;
     width: 20%; }
   #events .event_pic {
     width: 100%;
@@ -574,7 +576,7 @@ body, html {
 #codeplay {
   height: 700px;
   position: relative;
-  background-image: url("../img/cpfb.svg");
+  background-image: url("../img/cpfb1.svg");
   background-size: cover;
   top: 0;
   right: 0;
@@ -634,7 +636,7 @@ body, html {
     color: #fff;
     left: -40px;
     font-family: Lato_light;
-    font-size: 65px;
+    font-size: 60px;
     padding-bottom: 20px; }
   #profile span {
     font-family: Lato_light;
@@ -661,9 +663,9 @@ body, html {
     width: 70%;
     height: auto; }
   #profile .line_solid {
-    top: 26%;
+    top: 22%;
     width: 30%;
-    left: 40%;
+    left: 42%;
     position: absolute; }
   #profile .us {
     font-family: Lato_semibold; }
@@ -893,7 +895,8 @@ OFF CANVAS
   background-color: #fff;
   text-align: center;
   color: #0000d4;
-  font-size: 2em; }
+  font-size: 1em;
+  margin-top: 100px; }
 
 .line {
   width: 140px;
@@ -930,19 +933,18 @@ MEDIA QUERIES
     right: 10px; }
 
   #profile li {
-    font-size: 22px; }
+    font-size: 18px;
+    margin-left: -51px; }
   #profile .line_solid {
     display: none; }
 
   #loader .container {
     left: 25%; }
 
-  #projects .line_solid {
-    top: 160px; }
-
-  #profile {
-    padding-left: 0;
-    left: -10px; } }
+  #projects {
+    margin-top: 0; }
+    #projects .line_solid {
+      top: 160px; } }
 /*================================
 Common styles
 ===================================*/
