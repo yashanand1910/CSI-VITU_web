@@ -15,7 +15,7 @@ body, html {
 .line_solid {
   width: 39px;
   background: #fff;
-  height: 3px; }
+  height: 1.5px; }
 
 /*===============
 *LOADER
@@ -69,6 +69,7 @@ body, html {
     transform: scale(0);
     animation: shrinkgrow 3s ease-in-out infinite;
     animation-delay: 1s; }
+
 @keyframes shrinkgrow {
   0% {
     transform: scale(0); }
@@ -80,6 +81,7 @@ body, html {
     transform: scale(0); }
   100% {
     transform: scale(0); } }
+
 #loader-wrapper .loader-section {
   position: fixed;
   top: 0;
@@ -129,8 +131,7 @@ body, html {
 *BACKGROUND
 =================================================*/
 .bg-main {
-  background: #fff;
-  background-image: url("../img/main_bg0.jpg");
+  background: #74ddf4;
   background-size: cover;
   position: fixed;
   top: 0;
@@ -154,6 +155,7 @@ body, html {
 @media (max-width: 550px) {
   .bg-move {
     display: none; } }
+
 .x1 {
   -moz-animation: move-layer-bg 40s linear infinite;
   -webkit-animation: move-layer-bg 40s linear infinite;
@@ -166,8 +168,10 @@ body, html {
     margin-left: 100%; }
   100% {
     margin-left: -1800px; } }
+
 #main {
-  width: 100%;
+  margin-right: -15px;
+  margin-left: -15px;
   height: 1080px;
   max-width: 100%;
   max-height: auto; }
@@ -191,19 +195,23 @@ body, html {
 
 #Layer_2 {
   margin-top: 20%;
-  margin-right: -10%; }
+  margin-right: -15px;
+  font-family: Lato_semibold; }
 
 @keyframes draw {
   to {
     transition: cubic-bezier(0.55, 0, 0.1, 1);
     stroke-dashoffset: 0; } }
+
 @keyframes dpnothing {
   to {
     transition: none; } }
+
 .cloud_moon {
+  text-align: right;
   position: absolute;
   top: -125%;
-  right: 10%;
+  right: 0;
   overflow: visible; }
   .cloud_moon svg {
     width: 95%;
@@ -234,6 +242,7 @@ body, html {
     transform: rotate(0); }
   100% {
     transform: rotate(180deg); } }
+
 @keyframes partialRotate {
   0% {
     transform: rotate(0); }
@@ -245,31 +254,34 @@ body, html {
     transform: rotate(10deg); }
   100% {
     transform: rotate(0deg); } }
+
 @keyframes scale {
   0% {
     transform: scale(1, 1); }
   100% {
     transform: scale(0.5, 0.5); } }
+
 @keyframes behindCloudMove {
   0% {
     transform: translateX(-1.75px) translateY(1.75px); }
   100% {
     transform: translateX(0) translateY(0); } }
+
 /*=======================
 *PROJECTS
 =======================*/
 #projects {
   position: relative;
   margin-top: 150px;
-  font-family: Lato_light;
+  font-family: Lato_semibold;
   /* Grid style */
   /* Slideshow style */
   /* Navigation */ }
   #projects h2 {
-    font-family: Lato_thin;
+    font-family: Lato_light;
     text-align: left;
     font-size: 55px;
-    padding-bottom: 40px; }
+    padding-bottom: 15px; }
     #projects h2 span {
       font-family: Lato_semibold; }
     #projects h2 span:hover {
@@ -277,10 +289,8 @@ body, html {
       transform-origin: center;
       animation: disco 0.3s ease-in-out infinite; }
   #projects .line_solid {
-    position: absolute;
     top: 53px;
-    left: 50%;
-    width: 520px; }
+    width: 97%; }
   #projects .grid-gallery ul {
     list-style: none;
     margin: 0;
@@ -313,7 +323,7 @@ body, html {
     opacity: 0.7; }
   #projects .grid figcaption {
     color: #041182;
-    background: #e4e4e4;
+    background: #b6f2ff;
     padding: 25px; }
   #projects .slideshow {
     position: fixed;
@@ -388,11 +398,11 @@ body, html {
     padding: 1px 60px 12px 60px; }
     #projects .slideshow figcaption .project_tech {
       color: #f76767;
-      font-family: Lato_light; }
+      font-family: Lato_semibold; }
       #projects .slideshow figcaption .project_tech span {
         font-size: 12px;
         padding: 3px;
-        font-family: Lato_thin;
+        font-family: Lato_semibold;
         text-transform: uppercase;
         background: #0000d4;
         color: #fff;
@@ -449,7 +459,7 @@ body, html {
     color: #f76767;
     font-weight: 100; }
   #projects span.typcn-times {
-    color: red;
+    color: white;
     transition: 0.5s ease-in; }
   @media screen and (max-width: 60em) {
     #projects .grid li {
@@ -497,15 +507,16 @@ body, html {
   #collaboration h3 {
     padding-top: 50px;
     font-size: 40px;
-    font-family: Lato_thinitalic; }
+    font-family: Lato_bold; }
   #collaboration h4 {
-    font-family: Lato_thin;
+    font-family: Lato_semibold;
     font-size: 25px;
-    color: #dbdbdb; }
+    color: #fff; }
     #collaboration h4 :after {
       border-bottom: 2px solid #fff; }
   #collaboration h6 {
-    color: #dbdbdb;
+    font-family: Lato_semibold;
+    color: #fff;
     font-size: 18px;
     padding-bottom: 60px; }
   #collaboration h6 div {
@@ -514,13 +525,20 @@ body, html {
     position: relative;
     z-index: 1; }
   #collaboration h6:before {
-    background: #ddd;
+    background: #fff;
     content: "";
     display: block;
-    height: 1px;
+    height: 2px;
     position: absolute;
     top: 15%;
     width: 90%; }
+
+#mail-link {
+  text-decoration: none;
+  color: white; }
+
+#mail-link:active {
+  text-decoration: none; }
 
 /*=======================
 *EVENTS
@@ -529,12 +547,14 @@ body, html {
   text-align: left;
   padding-top: 80px;
   position: relative; }
+  #events h3 {
+    font-family: Lato_semibold; }
   #events h2 {
     text-align: right;
     text-transform: uppercase;
     font-family: Lato_light;
     font-size: 50px;
-    padding-bottom: 50px; }
+    padding-bottom: 15px; }
     #events h2 span {
       font-family: Lato_semibold; }
     #events h2 span:hover {
@@ -542,10 +562,8 @@ body, html {
       transform-origin: center;
       animation: disco 0.3s ease-in-out infinite; }
   #events .line_right {
-    top: 0;
-    position: absolute;
-    top: 10%;
-    width: 20%; }
+    float: right;
+    width: 100%; }
   #events .event_pic {
     width: 100%;
     height: auto;
@@ -559,14 +577,14 @@ body, html {
   #events .grow img:hover {
     transform: translate(1em, 1em); }
   #events .event_title {
-    font-family: Lato_thinitalic;
+    font-family: Lato_semibold;
     font-size: 25px;
     color: #fff; }
   #events p {
-    font-family: Lato_thin;
+    font-family: Lato_semibold;
     font-size: 20px;
-    color: #dbdbdb;
-    padding-bottom: 35px; }
+    color: #fff;
+    padding-bottom: 15px; }
   #events .event_padding {
     height: 100px; }
 
@@ -604,8 +622,8 @@ body, html {
       font-family: Lato_light;
       color: #f76969; }
   #codeplay h4 {
-    font-family: Lato_light;
-    color: #dbdbdb; }
+    font-family: Lato_semibold;
+    color: #fff; }
 
 /*=======================
 *PROFILE
@@ -617,30 +635,32 @@ body, html {
   padding-bottom: 10%;
   color: #3597d3;
   /*     h2:before {
-       background: #ddd;
-       content: "";
-       display: block;
-       height: 2px;
-       position: absolute;
-       top: 25%;
-       left: 32%;
-       width: 30%;
-     } 
-     */ }
+      background: #fff;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      top: 25%;
+      left: 32%;
+      width: 30%;
+    } 
+    */ }
   #profile ul {
     list-style: none;
     font-family: Lato_thinitalic;
     font-size: 30px; }
+  #profile h3 {
+    font-family: Lato_semibold; }
   #profile h2 {
     text-transform: uppercase;
     color: #fff;
     left: -40px;
-    font-family: Lato_light;
+    font-family: Lato_semibold;
     font-size: 60px;
     padding-bottom: 20px; }
   #profile span {
-    font-family: Lato_light;
-    color: #dbdbdb; }
+    font-family: Lato_semibold;
+    color: #fff; }
   #profile a {
     letter-spacing: 0;
     transition: all 1s linear; }
@@ -663,10 +683,7 @@ body, html {
     width: 70%;
     height: auto; }
   #profile .line_solid {
-    top: 22%;
-    width: 30%;
-    left: 42%;
-    position: absolute; }
+    width: 97%; }
   #profile .us {
     font-family: Lato_semibold; }
   #profile .us:hover {
@@ -674,7 +691,7 @@ body, html {
     transform-origin: center;
     animation: disco 0.3s ease-in-out infinite; }
 
-.csi_type svg {
+.csi_type img {
   width: 16%;
   height: auto;
   top: 25px;
@@ -686,7 +703,7 @@ body, html {
 .line_solid {
   width: 39px;
   background: #fff;
-  height: 3px; }
+  height: 2px; }
 
 /*==============================
 *NAVIGATION
@@ -806,15 +823,17 @@ body, html {
   top: 10%;
   left: 30px;
   line-height: 40px;
-  font-family: Lato_thin;
+  font-family: Lato_semibold;
   font-size: 30px;
   position: absolute;
   width: 100%; }
+
 #sidebar-wrapper .sidebar-nav li {
   z-index: 4999;
   display: inline-block;
   position: relative;
   width: 100%; }
+
 #sidebar-wrapper .social_links {
   left: 12px;
   position: absolute;
@@ -823,12 +842,15 @@ body, html {
     overflow-x: hidden; }
   #sidebar-wrapper .social_links li {
     display: inline; }
+
 #sidebar-wrapper .side_footer {
   position: absolute;
   bottom: 0;
   left: 30px; }
+
 #sidebar-wrapper .nav > li > a {
   font-family: Lato_semibold; }
+
 #sidebar-wrapper .nav > li > a:hover, #sidebar-wrapper .nav > li > a:focus {
   background-color: transparent;
   color: #fff;
@@ -918,7 +940,6 @@ MEDIA QUERIES
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .csi_type svg {
     width: 40%; }
-
   #Layer_2 {
     position: absolute;
     margin-right: 0;
@@ -926,25 +947,22 @@ MEDIA QUERIES
     top: 120px;
     right: 0px;
     width: 50%; }
-
   #codeplay img {
     width: 40%;
     top: 150px;
     right: 10px; }
-
   #profile li {
     font-size: 18px;
-    margin-left: -51px; }
+    margin-left: -5; }
   #profile .line_solid {
     display: none; }
-
   #loader .container {
     left: 25%; }
-
   #projects {
     margin-top: 0; }
     #projects .line_solid {
       top: 160px; } }
+
 /*================================
 Common styles
 ===================================*/
@@ -953,6 +971,7 @@ Common styles
     color: #ff6b8d; }
   100% {
     color: #f76767; } }
+
 /**********************************************************/
 .climacon_component-stroke {
   fill: white;
@@ -982,21 +1001,16 @@ IE and edge Support
 @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .csi_type {
     top: 0; }
-
   #loader {
     display: none; }
-
   #loader-wrapper, .loader-section {
     display: none; }
-
   svg {
     stroke-dashoffset: 0px; }
-
   /* IE10 */ }
+
 @supports (-ms-accelerator: true) {
   #main svg path {
     animation: none;
     animation-iteration-count: 0;
     stroke-dashoffset: 0; } }
-
-/*# sourceMappingURL=main.css.map */
